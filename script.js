@@ -68,3 +68,15 @@ const validateMessage = () => {
     messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true
 }
+
+const validateForm = () => {
+    if (validateName() || validateEmail() || validatePhone() || validateMessage()){
+        submitError.style.display = 'block';
+        submitError.innerHTML = "Pease fix error(s) to submit form";
+        
+        setTimeout(()=> {
+            submitError.style.display = 'none';
+        }, 3000);
+        return false
+    }
+}
