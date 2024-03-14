@@ -54,3 +54,17 @@ const validateEmail = () => {
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true
 }
+
+const validateMessage = () => {
+    var message = document.getElementById('contact-message').value;
+    var required = 30;
+    var left = required - message.length
+
+    if (left > 0){
+        messageError.innerHTML = left + " more characters required";
+        return true;
+    }
+
+    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true
+}

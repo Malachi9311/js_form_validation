@@ -49,7 +49,12 @@
 
         <div class="input-group">
           <label>Your Message</label>
-          <textarea rows="5" placeholder="Enter your message"></textarea>
+          <textarea
+            rows="5"
+            placeholder="Enter your message"
+            id="contact-message"
+            onkeyup="validateMessage()"
+          ></textarea>
           <span id="message-error"></span>
         </div>
 
